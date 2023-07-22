@@ -65,14 +65,16 @@ describe("Teacher Endpoints", () => {
     const res = await requestWithSupertest.get("/listTeachers");
     expect(res.status).toEqual(200);
     let body = res.body;
-
+    expect(body.length).toBe(4)
     expect(body).toContainEqual({
       "id": 10002,
       "name": "Saman",
       "age": 50
     });
+    
 
     expect(body).not.toContainEqual({
+
       "name": "Saman De Silva",
     });
   });
