@@ -28,7 +28,7 @@ const app = express();
 const bodyParser = require  ("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+module.exports = app;
 app.get("/dbinitialize", async function (req, res) {
   console.log("DB is getting initialized");
   let data = await dbinitialize();
@@ -75,6 +75,7 @@ app.post("/editTeacher", async function (req, res) {
 
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(data));
+  
 });
 
 app.post("/deleteTeacher", async function (req, res) {

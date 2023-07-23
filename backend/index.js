@@ -1,5 +1,5 @@
 const server  = require ("./server.js");
-
+import server from "./server.js";
 if(process.env.NODE_ENV === "test"){
   server.listen(3000, () => {
     console.log(
