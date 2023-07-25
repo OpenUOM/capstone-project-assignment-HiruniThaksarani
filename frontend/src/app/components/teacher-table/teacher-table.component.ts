@@ -14,7 +14,7 @@ export class TeacherTableComponent implements OnInit {
   faPenSquare = faPenSquare;
   teacherData: any;
   selected: any;
-
+  
   constructor(private service: AppServiceService, private router: Router) { }
 
   ngOnInit(): void {
